@@ -1,0 +1,72 @@
+/* Wrapper for the accordion */
+.wrapper-accordion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Styling the accordion container */
+  .accordion {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Styling each accordion item */
+  .accordionItem {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styling the title of each accordion item */
+  .accordionTitle {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordionTitle:hover {
+    background-color: #45a049;
+  }
+  
+  /* The "+" or "-" symbol */
+  .accordionTitle span {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Content section (answer) styling */
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #fafafa;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 4px solid #4CAF50;
+  }
+  
+  /* Show content when it's selected */
+  .accordionItem .content {
+    max-height: 500px; /* Adjust max-height as needed */
+    padding: 15px;
+  }
+  
+  /* Rotate the icon when the accordion is expanded */
+  .accordionItem.active .accordionTitle span {
+    transform: rotate(45deg);
+  }
+  
