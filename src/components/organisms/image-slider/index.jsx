@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
 import './styles.css'
+import PropTypes from 'prop-types'
 
 const ImageSlider = ({ url, limit = 5, page = 1 }) => {
 
@@ -77,5 +78,11 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
         </div>
     )
 }
+
+ImageSlider.propTypes = {
+    url: PropTypes.string.isRequired, // url mütləq olmalıdır
+    limit: PropTypes.number,
+    page: PropTypes.number,
+  };
 
 export default ImageSlider
