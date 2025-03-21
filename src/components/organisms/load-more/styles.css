@@ -1,0 +1,19 @@
+.products-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item{
+    font-weight: 900;
+    border: 1px solid orangered; 
+    padding: 10px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: .1rem;
+}

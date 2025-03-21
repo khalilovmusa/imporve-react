@@ -32,7 +32,7 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     }
 
     const handleNext = () => {
-        setCurrentSlide(currentSlide === images.length ? 0 : currentSlide + 1)
+        setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1)
     }
 
     console.log(images)
