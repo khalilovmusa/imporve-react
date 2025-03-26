@@ -6,6 +6,7 @@ const LoadMore = () => {
     const [ loading, setLoading ] = useState(false)
     const [ products, setProducts ] = useState([])
     const [ count, setCount ] = useState(0)
+    const [ disableButton, setDisableButton ] = useState(false)
 
     async function fetchProducts() {
         try{
@@ -39,6 +40,12 @@ const LoadMore = () => {
         fetchProducts()
     },[count])
 
+    useEffect(()  => {
+        if(products && products.length === 100){
+            setDisableButton(true)
+        }
+    }, [products])
+
     if(loading){
         return(
             <div>Loading...</div>
@@ -52,7 +59,7 @@ const LoadMore = () => {
             products.map((item) => (<div className='product-item' key={item.id}>Name:{item.title} <br/> price: {item.price}</div>))
             : null
         } 
-    <button onClick={() => setCount((prev) => prev+1)}>
+    <button disabled={disableButton} onClick={() => setCount((prev) => prev+1)}>
         Load more
     </button>
     </div>
