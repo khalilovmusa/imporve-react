@@ -8,6 +8,7 @@ import ImageSlider from './components/organisms/image-slider'
 import LoadMore from './components/organisms/load-more'
 import ThreeView from './components/organisms/three-view'
 import { sideMenu } from './store/data/threeView'
+import QrCodeGenerator from './components/organisms/qr-code-generator'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -22,5 +23,7 @@ createRoot(document.getElementById('root')).render(
    <LoadMore />
 
    <ThreeView threeView={sideMenu} />
+
+   <QrCodeGenerator />
   </>
 )
