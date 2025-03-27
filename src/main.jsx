@@ -9,6 +9,7 @@ import LoadMore from './components/organisms/load-more'
 import ThreeView from './components/organisms/three-view'
 import { sideMenu } from './store/data/threeView'
 import QrCodeGenerator from './components/organisms/qr-code-generator'
+import SetTheme from './components/organisms/change-theme'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -25,5 +26,7 @@ createRoot(document.getElementById('root')).render(
    <ThreeView threeView={sideMenu} />
 
    <QrCodeGenerator />
+
+   <SetTheme />
   </>
 )
