@@ -11,7 +11,7 @@ const useLocalStorage = (key, defaultValue) => {
             console.log(e)
             currentValue = defaultValue
         }
-
+  
         return currentValue
     })
 

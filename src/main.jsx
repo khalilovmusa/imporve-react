@@ -10,6 +10,9 @@ import ThreeView from './components/organisms/three-view'
 import { sideMenu } from './store/data/threeView'
 import QrCodeGenerator from './components/organisms/qr-code-generator'
 import SetTheme from './components/organisms/change-theme'
+import ScrollIndicator from './components/organisms/scroll-indicator'
+import CustomTabs from './components/organisms/tabs'
+import TabsTest from './components/organisms/tabs/tabs-test'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -28,5 +31,11 @@ createRoot(document.getElementById('root')).render(
    <QrCodeGenerator />
 
    <SetTheme />
+
+   <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
+
+   <CustomTabs /> 
+
+   <TabsTest />
   </>
 )
