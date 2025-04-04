@@ -13,6 +13,8 @@ import SetTheme from './components/organisms/change-theme'
 import ScrollIndicator from './components/organisms/scroll-indicator'
 import CustomTabs from './components/organisms/tabs'
 import TabsTest from './components/organisms/tabs/tabs-test'
+import Popup from './components/organisms/popup/Popup'
+import PopupTest from './components/organisms/popup/popup-test'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -37,5 +39,7 @@ createRoot(document.getElementById('root')).render(
    <CustomTabs /> 
 
    <TabsTest />
+
+   <PopupTest />
   </>
 )
