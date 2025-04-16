@@ -15,6 +15,7 @@ import CustomTabs from './components/organisms/tabs'
 import TabsTest from './components/organisms/tabs/tabs-test'
 import Popup from './components/organisms/popup/Popup'
 import PopupTest from './components/organisms/popup/popup-test'
+import GithubProfileFinder from './components/organisms/github-profile-finder'
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -41,5 +42,7 @@ createRoot(document.getElementById('root')).render(
    <TabsTest />
 
    <PopupTest />
+
+   <GithubProfileFinder />
   </>
 )

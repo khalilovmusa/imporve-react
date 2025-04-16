@@ -6,7 +6,6 @@ const PopupTest = () => {
 
     const handleToggleModalPopup = () => {
         setShowModalPopup((prevState) => !prevState)
-        console.log(showModalPopup)
     }
 
     const onClose = () => {
@@ -19,7 +18,7 @@ const PopupTest = () => {
             Open modal popup
         </button>
         {
-            showModalPopup && <Popup onClose={onClose} body={<div>This is a custom body content</div>} />
+            showModalPopup && <Popup onClose={onClose} header={<h4 style={{color: 'red', }}>This is a header content custom version</h4>} body={<div>This is a custom body content</div>} />
         }
     </div>
   )
