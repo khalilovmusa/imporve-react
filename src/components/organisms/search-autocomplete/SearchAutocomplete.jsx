@@ -58,7 +58,7 @@ const SearchAutocomplete = () => {
         filteredUsers.map((item) => {
             return <li>{item}</li>
         })
-        : <div></div>}
+        : null}
     </div>
   )
 }
