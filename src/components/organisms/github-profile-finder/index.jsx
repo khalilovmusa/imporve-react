@@ -16,12 +16,12 @@ const GithubProfileFinder = () => {
         if(data){
             setUserData(data)
             setIsLoading(false)
+            setUserName('')
         }
-        console.log(data)
     }
 
     const handleSubmit = () => {
-
+        fetchGithubUserData()
     }
 
     useEffect(() => {

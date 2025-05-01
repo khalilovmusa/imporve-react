@@ -16,10 +16,11 @@ import TabsTest from './components/organisms/tabs/tabs-test'
 import Popup from './components/organisms/popup/Popup'
 import PopupTest from './components/organisms/popup/popup-test'
 import GithubProfileFinder from './components/organisms/github-profile-finder'
+import SearchAutocomplete from './components/organisms/search-autocomplete/SearchAutocomplete'
 
 createRoot(document.getElementById('root')).render(
   <>
-   <Accordion />
+   {/* <Accordion />
 
    <RandomColor />
 
@@ -43,6 +44,8 @@ createRoot(document.getElementById('root')).render(
 
    <PopupTest />
 
-   <GithubProfileFinder />
+   <GithubProfileFinder /> */}
+
+   <SearchAutocomplete />
   </>
 )

@@ -1,6 +1,10 @@
 import React from 'react'
 
 const UserCard = ({userData}) => {
+    const {avatar_url, followers, following, public_repos, location, login, name, created_at} = userData;
+
+    const createdData = new Date(created_at);
+
   return (
     <div className='github-profile-header'
     style={{
@@ -19,33 +23,34 @@ const UserCard = ({userData}) => {
             fontSize: '20px',
             fontWeight: 'bold'
         }}>
-            Name: {userData.name}
+            Name: {name}
         </p>
         <p>
-            Username: {userData.login}
+            Username: {login}
         </p>
         <p>
-            Following: {userData.following}
+            Following: {following}
         </p>
         <p>
-            Followers: {userData.followers}
+            Followers: {followers}
         </p>
         <p>
-            Location: {userData.location}
+            Location: {location}
         </p>
         <p>
-            Public repos: {userData.public_repos}
+            Public repos: {public_repos}
         </p>
-        <a href={userData.url} target='_blank'>
-            {userData.url}
+        <a href={`https://www.github.com/${login}`} target='_blank'>
+            {`https://www.github.com/${login}`}
         </a>
+        <p>Joined at: {`${createdData.getDate()} ${createdData.toLocaleString('en-us', {month: 'short'})} ${createdData.getFullYear()} `}</p>
        </div>
         <img 
         style={{
             borderRadius: '50%',
             height: '250px'
         }}
-         src={userData.avatar_url} 
+         src={avatar_url} 
          alt="user_avatar" />
     </div>
   )
